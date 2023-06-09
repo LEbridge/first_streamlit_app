@@ -33,21 +33,10 @@ try:
   if not fruit_choice:
     streamlit.error ("Please select a fruit to get information.")
   else:
-#streamlit.write('The user entered ', fruit_choice)
     back_from_function = get_fruityvice_data(fruit_choice)
-#streamlit.text(fruityvice_response.json())
-# write your own comment -what does the next line do? 
-# write your own comment - what does this do?
     streamlit.dataframe(back_from_function)
 except URLError as e:
   streamlit.error()
-
-
-#my_cur = my_cnx.cursor()
-#my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
-#my_data_row = my_cur.fetchone()
-#my_data_rows = my_cur.fetchall()
-#streamlit.text("Hello from Snowflake:")
 
 streamlit.header("The fruit load list contains:")
 #Snowflake-related functions
